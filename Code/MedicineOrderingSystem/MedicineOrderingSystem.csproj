@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91AFE77E-A8EE-4AD8-BA2E-8AD49231AA38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MedicineOrderingSystem</RootNamespace>
+    <AssemblyName>MedicineOrderingSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>..\..\..\..\..\app\janna\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PatientReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PatientReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="RefillsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RefillsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Form_DriverManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DriverManagement.Designer.cs">
+      <DependentUpon>Form_DriverManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MedicationManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MedicationManagement.Designer.cs">
+      <DependentUpon>Form_MedicationManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_OrderTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_OrderTracking.Designer.cs">
+      <DependentUpon>Form_OrderTracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PatientRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PatientRegistration.Designer.cs">
+      <DependentUpon>Form_PatientRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Report_Refills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Report_Refills.Designer.cs">
+      <DependentUpon>Form_Report_Refills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Report_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Report_Search.Designer.cs">
+      <DependentUpon>Form_Report_Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Interface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Interface.Designer.cs">
+      <DependentUpon>Main_Interface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Report_Search.resx">
+      <DependentUpon>Form_Report_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PatientReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RefillsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RefillsReport.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DriverManagement.resx">
+      <DependentUpon>Form_DriverManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MedicationManagement.resx">
+      <DependentUpon>Form_MedicationManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_OrderTracking.resx">
+      <DependentUpon>Form_OrderTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PatientRegistration.resx">
+      <DependentUpon>Form_PatientRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Report_Refills.resx">
+      <DependentUpon>Form_Report_Refills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Interface.resx">
+      <DependentUpon>Main_Interface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
