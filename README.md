@@ -46,7 +46,16 @@ An engineering-focused e-commerce platform designed to help patients safely, sec
 5. **Fulfillment:** Upon successful authorization, a PDF receipt is issued, a tracking number is generated, and the delivery driver routing engine is notified.
 
 ---
-
+## 📂 Repository Layout
+```text
+📂 Medicine-Ordering-System
+ ├── 📂 Code              
+ │    └── 📂 Medicine-Ordering-System  # Main VS Code project workspace
+ ├── 📂 Database                       # SQL schemas, tables, and configuration scripts
+ ├── 📂 Documentation                  # System Requirements (SRS) and UML diagrams
+ └── 📄 README.md                      # Profile landing page
+```
+---
 ## 👥 Contributors 
 * Jannah Mohamed Abdallah
 * Fayrouz Sameh Salah
